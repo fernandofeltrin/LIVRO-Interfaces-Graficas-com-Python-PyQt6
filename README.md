@@ -1,0 +1,1 @@
+# LIVRO-Interfaces-Graficas-com-Python-PyQt6
