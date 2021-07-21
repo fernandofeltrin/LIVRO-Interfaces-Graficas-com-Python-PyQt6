@@ -5,10 +5,10 @@ from PyQt6.QtGui import *
 class JanelaPrincipal(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle('Meu Programa') # Define manualmente o título da janela.
+        self.setWindowTitle('Meu Programa')
         self.setWindowIcon(QIcon('icone.png'))
-        self.setGeometry(150, 150, 350, 300) # Por justaposição, o primeiro parâmetro define a distância em pixels da lateral esquerda da tela até a janela, seguido do segundo parâmetro que define a distância em pixels do topo da tela até a borda superior da janela. Na sequência os dois últimos parâmetros se referem a largura e a altura da janela, respectivamente.
-        self.Interface() # Instancia o método de classe Interface()
+        self.setGeometry(150, 150, 350, 300)
+        self.Interface()
 
     def Interface(self):
         layout = QFormLayout()
@@ -19,6 +19,7 @@ class JanelaPrincipal(QWidget):
         texto_senha = QLabel('Senha: ')
         input_senha = QLineEdit()
         input_senha.setPlaceholderText('Digite sua senha')
+        input_senha.setEchoMode(QLineEdit.EchoMode.Password)
         seleciona_ambiente = QComboBox()  # Cria uma caixa de seleção inicialmente vazia.
         seleciona_ambiente.addItem('Ambiente Comum')  # Primeiro elemento da caixa de seleção
         seleciona_ambiente.addItem('Painel de Controle')  # Segundo elemento da caixa de seleção
