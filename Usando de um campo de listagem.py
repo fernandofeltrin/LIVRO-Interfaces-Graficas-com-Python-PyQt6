@@ -5,10 +5,10 @@ from PyQt6.QtGui import *
 class JanelaPrincipal(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle('Cadastro de Clientes') # Define manualmente o título da janela.
+        self.setWindowTitle('Cadastro de Clientes')
         self.setWindowIcon(QIcon('icone.png'))
-        self.setGeometry(150, 150, 365, 300) # Por justaposição, o primeiro parâmetro define a distância em pixels da lateral esquerda da tela até a janela, seguido do segundo parâmetro que define a distância em pixels do topo da tela até a borda superior da janela. Na sequência os dois últimos parâmetros se referem a largura e a altura da janela, respectivamente.
-        self.Interface() # Instancia o método de classe Interface()
+        self.setGeometry(150, 150, 365, 300) 
+        self.Interface()
 
     def Interface(self):
         self.texto1 = QLabel('Insira no campo abaixo o dado/valor: ', self)
